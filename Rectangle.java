@@ -10,11 +10,11 @@ public class Rectangle implements Figure {
     }
 
     public double getPerimeter() {
-        return (this.width + this.height) * 2.0;
+        return (width + height) * 2.0;
     }
 
     public double getArea() {
-        return this.width * this.height;
+        return width * height;
     }
 
     public void setFillColor(String color) {
@@ -27,9 +27,9 @@ public class Rectangle implements Figure {
 
     public void displayInfo() {
         System.out.println("Прямоугольник⁚");
-        System.out.println("Периметр⁚ " + this.getPerimeter());
-        System.out.println("Площадь⁚ " + this.getArea());
-        System.out.println("Цвет заливки⁚ " + this.color);
-        System.out.println("Цвет границы⁚ " + this.borderColor);
+        System.out.println("Периметр⁚ " + getPerimeter());
+        System.out.println("Площадь⁚ " + getArea());
+        System.out.println("Цвет заливки⁚ " + color);
+        System.out.println("Цвет границы⁚ " + borderColor);
     }
 }

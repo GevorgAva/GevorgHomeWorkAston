@@ -9,12 +9,19 @@ public class Main {
         cats[3] = new Cat("Серый", 100);
         cats[4] = new Cat("Батон", 10);
 
+
         Bowl bowl = new Bowl(150);
+
 
         for (Cat cat : cats) {
             cat.eat(bowl);
             cat.catInfo();
         }
+        Dog dog = new Dog("Шарик");
+
+        System.out.println("Количество котов: " + Cat.getCount());
+        System.out.println("Количество собак: " + Dog.getCount());
+        System.out.println("Количество животных: " + Animal.getCount());
 
 
         Circle circle1 = new Circle(2.0);
@@ -30,4 +37,6 @@ public class Main {
         triangle1.setBorderColor("Оранжевый");
         triangle1.displayInfo();
     }
+
+
 }

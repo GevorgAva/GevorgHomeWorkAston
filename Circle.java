@@ -8,11 +8,11 @@ public class Circle implements Figure {
     }
 
     public double getPerimeter() {
-        return 6.283185307179586 * this.radius;
+        return 2 * Math.PI * radius;
     }
 
     public double getArea() {
-        return Math.PI * this.radius * this.radius;
+        return Math.PI * radius * radius;
     }
 
     public void setFillColor(String color) {
@@ -25,9 +25,9 @@ public class Circle implements Figure {
 
     public void displayInfo() {
         System.out.println("Круг⁚");
-        System.out.println("Периметр⁚ " + this.getPerimeter());
-        System.out.println("Площадь⁚ " + this.getArea());
-        System.out.println("Цвет заливки⁚ " + this.color);
-        System.out.println("Цвет границы⁚ " + this.borderColor);
+        System.out.println("Периметр⁚ " + getPerimeter());
+        System.out.println("Площадь⁚ " + getArea());
+        System.out.println("Цвет заливки⁚ " + color);
+        System.out.println("Цвет границы⁚ " + borderColor);
     }
 }

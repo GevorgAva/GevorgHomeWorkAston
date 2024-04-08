@@ -12,12 +12,12 @@ public class Triangle implements Figure {
     }
 
     public double getPerimeter() {
-        return this.sideA + this.sideB + this.sideC;
+        return sideA + sideB + sideC;
     }
 
     public double getArea() {
-        double p = this.getPerimeter() / 2.0;
-        return Math.sqrt(p * (p - this.sideA) * (p - this.sideB) * (p - this.sideC));
+        double p = getPerimeter() / 2.0;
+        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
     }
 
     public void setFillColor(String color) {
@@ -30,9 +30,9 @@ public class Triangle implements Figure {
 
     public void displayInfo() {
         System.out.println("Треугольник⁚");
-        System.out.println("Периметр⁚ " + this.getPerimeter());
-        System.out.println("Площадь⁚ " + this.getArea());
-        System.out.println("Цвет заливки⁚ " + this.color);
-        System.out.println("Цвет границы⁚ " + this.borderColor);
+        System.out.println("Периметр⁚ " + getPerimeter());
+        System.out.println("Площадь⁚ " + getArea());
+        System.out.println("Цвет заливки⁚ " + color);
+        System.out.println("Цвет границы⁚ " + borderColor);
     }
 }

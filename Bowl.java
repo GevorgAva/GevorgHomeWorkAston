@@ -7,7 +7,7 @@ public class Bowl {
 
     public void addFoodInBowl(int value) {
         if (value > 0) {
-            this.foodCount += value;
+            foodCount += value;
         } else {
             System.out.println("Некорректное занчение value");
         }
@@ -15,9 +15,9 @@ public class Bowl {
     }
 
     public boolean decreaseFood(int valueOfWellFed) {
-        int diff = this.foodCount - valueOfWellFed;
+        int diff = foodCount - valueOfWellFed;
         if (diff >= 0) {
-            this.foodCount -= valueOfWellFed;
+            foodCount -= valueOfWellFed;
             return true;
         } else {
             return false;
@@ -25,6 +25,6 @@ public class Bowl {
     }
 
     public void getInfoOfBowl() {
-        System.out.println("Еды в миске: " + this.foodCount);
+        System.out.println("Еды в миске: " + foodCount);
     }
 }

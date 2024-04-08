@@ -1,15 +1,15 @@
 public class Dog extends Animal {
-    private int count;
+    private static int count;
 
     public Dog(String name) {
         super(name);
-        ++this.count;
+        ++count;
     }
 
     void run(int length) {
         int MAX_RUN_LENGTH = 500;
         if (length > 0 && length <= MAX_RUN_LENGTH) {
-            System.out.println(this.name + " пробежал " + length + "м.");
+            System.out.println(name + " пробежал " + length + "м.");
         } else {
             System.out.println("Собака может пробежать не более " + MAX_RUN_LENGTH + "м.");
         }
@@ -19,14 +19,14 @@ public class Dog extends Animal {
     void swim(int length) {
         int MAX_SWIM_LENGTH = 10;
         if (length > 0 && length <= MAX_SWIM_LENGTH) {
-            System.out.println(this.name + " проплыл " + length + "м.");
+            System.out.println(name + " проплыл " + length + "м.");
         } else {
             System.out.println("Собака может проплыть не более " + MAX_SWIM_LENGTH + "м.");
         }
 
     }
 
-    void getCount() {
-        System.out.println("Количество собак: " + this.count);
+    public static int getCount() {
+        return count;
     }
 }
