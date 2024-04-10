@@ -17,12 +17,12 @@ public class Employee {
     }
 
     public void getEmployeeInfo() {
-        System.out.println("ФИО: " + this.fullName);
-        System.out.println("Должность: " + this.position);
-        System.out.println("Email: " + this.email);
-        System.out.println("Номер телефона: " + this.phone);
-        System.out.println("ЗП: " + this.salary);
-        System.out.println("Возраст: " + this.age);
+        System.out.println("ФИО: " + fullName);
+        System.out.println("Должность: " + position);
+        System.out.println("Email: " + email);
+        System.out.println("Номер телефона: " + phone);
+        System.out.println("ЗП: " + salary);
+        System.out.println("Возраст: " + age);
     }
 
 
