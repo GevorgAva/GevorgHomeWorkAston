@@ -1,4 +1,5 @@
 import org.example.FactorialCalc;
+import org.example.MyNegativeValueException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -26,10 +27,11 @@ public class FactorialCalcTest {
         Assert.assertEquals(1, factorialCalc.getFactorial(value));
     }
 
-    @Test(testName="Проверка расчета факториала отрицательного числа")
+    @Test(testName="Проверка расчета факториала отрицательного числа", expectedExceptions = MyNegativeValueException.class,
+            expectedExceptionsMessageRegExp = "Невозможно рассчитать факториал отрицательного числа")
     public void negativeValueCalc() {
         int value = -50;
-        Assert.assertEquals(0, factorialCalc.getFactorial(value));
+        factorialCalc.getFactorial(value);
     }
 
 }
