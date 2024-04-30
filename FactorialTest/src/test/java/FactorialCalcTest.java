@@ -1,3 +1,4 @@
+import junit.framework.Assert;
 import org.example.FactorialCalc;
 import org.example.MyNegativeValueException;
 import org.junit.jupiter.api.BeforeEach;
@@ -42,7 +43,7 @@ public class FactorialCalcTest {
         String expectedMessage = "Невозможно рассчитать факториал отрицательного числа";
         String actualMessage = myNegativeValueException.getMessage();
 
-        assertTrue(actualMessage.equals(expectedMessage));
+        Assert.assertEquals(actualMessage, expectedMessage);
 
     }
 }

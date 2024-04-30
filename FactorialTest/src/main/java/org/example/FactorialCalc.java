@@ -1,7 +1,4 @@
 package org.example;
-
-import java.math.BigInteger;
-
 public class FactorialCalc {
 
     public int getFactorial(int f) {
