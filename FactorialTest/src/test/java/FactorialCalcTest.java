@@ -1,9 +1,13 @@
 import org.example.FactorialCalc;
+import org.example.MyNegativeValueException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
+import static junit.framework.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FactorialCalcTest {
     private FactorialCalc factorialCalc;
@@ -31,6 +35,14 @@ public class FactorialCalcTest {
     @Test
     public void negativeValueCalc() {
         int value = -10;
-        assertEquals(0, factorialCalc.getFactorial(value));
+        MyNegativeValueException myNegativeValueException = assertThrows(MyNegativeValueException.class, () ->
+        { factorialCalc.getFactorial(value);
+        });
+
+        String expectedMessage = "Невозможно рассчитать факториал отрицательного числа";
+        String actualMessage = myNegativeValueException.getMessage();
+
+        assertTrue(actualMessage.equals(expectedMessage));
+
     }
 }
